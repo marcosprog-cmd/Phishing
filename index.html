@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simulação Phishing - BB</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="phishing-card" id="etapa1">
+    <img src="imagens/image.png" alt="Banco do Brasil" class="logo" />
+
+    <div class="alerta-topo">Você acabou de receber um Pix!</div>
+
+    <p class="texto">Prezado(a) <strong>Usuário</strong>,</p>
+    <p class="texto">
+      Você acabou de receber um pagamento instantâneo, porém ele foi identificado como uma <strong>transação suspeita</strong>.  
+      Por segurança, <strong>todas</strong> as transações da sua conta foram bloqueadas.
+      Para desbloquear, clique abaixo:
+    </p>
+
+    <a href="#" onclick="mostrarFormulario(event)" class="botao">DESBLOQUEAR CONTA</a>
+
+    <div class="detalhes">
+      <p><strong>Veja os detalhes:</strong></p>
+      <p><strong>Valor:</strong> R$ 1.380,00</p>
+      <p><strong>Pagador:</strong> Marcos Antônio Pereira Nunes Florentino</p>
+      <p><strong>Instituição:</strong> Banco NuPagamentosS.A</p>
+      <p><strong>CPF:</strong> 123.456.789-00</p>
+    </div>
+
+    <p class="assinatura">Um abraço,<br/>Equipe Banco do Brasil</p>
+    <p class="aviso">⚠️ Esta é uma simulação educativa. Nenhuma informação é real ou coletada.</p>
+  </div>
+
+  <div class="phishing-card" id="etapa2" style="display: none;">
+    <h2>Verificação de Identidade</h2>
+    <p>Por segurança, confirme seus dados abaixo:</p>
+
+    <form onsubmit="enviarSimulacao(event)">
+      <input type="text" placeholder="Nome completo" required />
+      <input type="text" placeholder="CPF" required />
+      <input type="email" placeholder="E-mail" required />
+      <button type="submit">Confirmar</button>
+    </form>
+
+    <p class="aviso">⚠️ Esta é apenas uma simulação. Nenhuma informação é real ou será enviada.</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
